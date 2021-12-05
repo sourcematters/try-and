@@ -1,2 +1,2 @@
 # try-and
-Reddit bot to correct incorrect use of "try and" to "try to."
+Reddit bot to correct the use of "try and" to "try to."
