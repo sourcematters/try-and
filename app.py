@@ -36,9 +36,8 @@ def do_bot_stuff():
 
                         logging.info(f"Replied to post: {result.link_permalink}")
                     except praw.exceptions.RedditAPIException as api_exc:
-                        if 'ratelimit' in api_exc:
-                            rate_limit_seconds *= 10  # Add 10 minutes to retry
-                            logging.exception(f"Backing off retry frequency due to rate limit: [{rate_limit_seconds} seconds]")
+                        rate_limit_seconds *= 10  # Add 10 minutes to retry
+                        logging.exception(f"Backing off retry frequency due to rate limit: [{rate_limit_seconds} seconds]")
                     except Exception as e:
                         logging.exception(e)
             comments += 1
